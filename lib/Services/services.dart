@@ -22,7 +22,7 @@ class Services {
   }
 
   static List<Products> parseProducts(String responseBody) {
-    List parsed = (json.decode(responseBody)).cast<Map<String, dynamic>>();
+    final parsed = (json.decode(responseBody)).cast<Map<String, dynamic>>();
     return parsed.map<Products>((json) => Products.fromJson(json)).toList();
   }
 }
